@@ -1,0 +1,26 @@
+{
+  "name": "find-a-sitter",
+  "version": "1.0.0",
+  "description": "An application for finding the perfect last-minute pet sitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephvelazquez/find-a-sitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephvelazquez/find-a-sitter/issues"
+  },
+  "homepage": "https://github.com/stephvelazquez/find-a-sitter#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "nodemon": "^1.10.2",
+    "sequelize": "^3.24.1"
+  }
+}
