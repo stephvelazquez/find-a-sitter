@@ -69,17 +69,17 @@ var Appointment = sequelize.define('Appointment', {
   timestamps: false
 });
 
-User.hasMany(Pet, {foreignKey: 'petId'});
+User.hasMany(Pet, {foreignKey: 'ownerId'});
 User.hasMany(Appointment, {foreignKey: 'sitterId'});
 User.hasMany(Role, {foreignKey: 'userId'});
 
 Pet.belongsTo(User, {foreignKey: 'ownerId'});
-Pet.hasMany('Appointment', foreignKey: 'appointmentId');
+Pet.hasMany('Appointment', foreignKey: 'petId');
 
-Appointment.hasMany('User', {foreignKey: 'sitterId'});
-Appointment.hasMany('Pet', {foreignKey: 'petId'});
+Appointment.hasMany('User', {foreignKey: 'appointmentId'});
+Appointment.hasMany('Pet', {foreignKey: 'appointmentId'});
 
-Role.hasMany('User', {foreignKey: 'userId'});
+Role.hasMany('User', {foreignKey: 'roleId'});
 
 exports.User = User;
 exports.Role = Role;
